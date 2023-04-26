@@ -1,0 +1,8 @@
+Part 1 - https://www.youtube.com/watch?v=6zyvtxJSoyA
+
+Part 2- https://www.youtube.com/watch?v=z3feuRCmsMM
+
+
+
+watch dashboard
+pbi-tools extract -pid "processID" -watch
