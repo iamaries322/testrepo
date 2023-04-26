@@ -1,0 +1,33 @@
+
+download pbi-tools zip folder
+move to C:/tool/pbi-tools (for easier path)
+
+create folder on desktop(report) 
+open in vscode and put the following commands in the terminal:
+git init (make it git enabled)
+git lfs install (working with large data) 
+note: git lfs install is applied on only "reports" folder, any new folders you make needs "git lfs install" t be used
+
+git lfs track "*.pbix"    (include the quotations"
+this tracks all the pbix files in our git enabled folder
+   
+create file withing "report" folder named as ".pbixproj.json"
+go to this link : "https://github.com/iamaries322/testrepo"
+search for ".pbisproj.json" on this link and copy its contents to your folder"
+
+create folder ".github" > create sub-folder "workflows" > create a file "deploy-reports.yml"
+
+put your test powerbi dashboard in "report" (i.e. git enabled) folder
+keep your power bi dashboard opened and then 
+
+on vscode terminal enter following commands without quotes
+"pbi-tools info"
+
+scroll down and you would find "Process ID" 
+this is would help you link your currently open dashboard to pbi-tools
+
+now put the command:
+"pbi-tools extract -pid "processID" -watch"
+here copy the process id you got from the pbi-tools info
+
+now any changes made to pbix file will be reflected in the "config.json" file in source control section of vscode
