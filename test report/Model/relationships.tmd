@@ -4,6 +4,7 @@ relationship '45495964-ad08-41a9-bf46-dbb75026faff'
 
 relationship '1756cf82-0b54-406c-975f-23b89d86efd8'
 	fromColumn: SalesFact.ProductID
+	isActive: false
 	toColumn: Product.ProductID
 
 relationship '07bc428e-2f34-468d-887f-be0998fa0278'

@@ -140,7 +140,7 @@ table SalesFact
 		isHidden
 		lineageTag: 7dcb7d44-e199-4a82-8823-b8204fbf5121
 		sourceColumn: ProductID
-		summarizeBy: None
+		summarizeBy: Count
 
 		annotation SummarizationSetBy = Automatic
 

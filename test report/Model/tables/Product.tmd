@@ -60,9 +60,11 @@ table Product
 		isHidden
 		lineageTag: 4dc9152b-ba48-4585-b533-b060c462af57
 		sourceColumn: ProductID
-		summarizeBy: None
+		summarizeBy: Count
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		annotation SummarizationSetBy = Automatic
 
 	column isVanArsdel = IF([Manufacturer]="VanArsdel", "Yes", "No")
 		dataType: String
