@@ -1,0 +1,41 @@
+{
+  "name": "VisualContainer",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 246.74157303370785,
+        "y": 6.16262482168331,
+        "z": 0,
+        "width": 711.91011235955057,
+        "height": 68.81597717546363
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Growth Opportunities",
+                    "textStyle": {
+                      "fontFamily": "Heading",
+                      "fontSize": "28pt",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

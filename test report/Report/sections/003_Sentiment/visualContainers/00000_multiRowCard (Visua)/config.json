@@ -1,0 +1,48 @@
+{
+  "name": "VisualContainer3",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 397,
+        "y": 10,
+        "z": 3000,
+        "width": 117,
+        "height": 72
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "multiRowCard",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "select"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "SalesFact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sentiment"
+          },
+          "Name": "select"
+        }
+      ]
+    }
+  }
+}

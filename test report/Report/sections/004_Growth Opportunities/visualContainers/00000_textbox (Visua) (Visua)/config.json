@@ -1,0 +1,42 @@
+{
+  "name": "VisualContainer3",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 839.8716577540107,
+        "y": 686.00858369098717,
+        "z": 3000,
+        "width": 119.10160427807486,
+        "height": 32.961373390557938
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "obviEnce llc ©",
+                    "textStyle": {
+                      "fontFamily": "Heading",
+                      "fontSize": "8pt",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

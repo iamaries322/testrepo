@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Filter",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Product"
+          }
+        },
+        "Property": "Segment"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 1,
+    "isLinkedAsAggregation": false
+  },
+  {
+    "name": "Filter1",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Date"
+          }
+        },
+        "Property": "Month"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 1,
+    "isLinkedAsAggregation": false
+  },
+  {
+    "name": "Filter2",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Product"
+          }
+        },
+        "Property": "isVanArsdel"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 1,
+    "isLinkedAsAggregation": false
+  }
+]

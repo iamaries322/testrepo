@@ -1,0 +1,81 @@
+table Geo
+	lineageTag: 5c925919-8b4a-4282-bd45-e8984ade9656
+	ordinal: 4
+
+	partition Geo = M
+		mode: Import
+		expression:=
+			let
+			    Source = Sql.Database(".", "IP", [Query="SELECT [SalesAndMarketing].[Geo].*   FROM [SalesAndMarketing].[Geo]"]),
+			    #"Renamed Columns" = Table.RenameColumns(Source, {{"Zip", "Zip"}, {"City", "City"}, {"State", "State"}, {"Region", "Region"}, {"District", "District"}}),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Zip", type text}, {"City", type text}, {"State", type text}, {"Region", type text}, {"District", type text}})
+			in
+			    #"Changed Type"
+
+
+	column Zip
+		dataCategory: PostalCode
+		dataType: String
+		isDataTypeInferred: false
+		isHidden
+		lineageTag: 60359fd0-1cbd-41df-a95b-d99506ebdaed
+		sourceColumn: Zip
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataCategory: City
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: fa622f9a-efb1-409a-ab30-b91d776f1f06
+		sourceColumn: City
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataCategory: StateOrProvince
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 9fcaec6b-9345-4e27-a13d-f21f72b9356d
+		sourceColumn: State
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataCategory: Region
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: a5e72325-16eb-4d71-a882-d70076f5d5a4
+		sourceColumn: Region
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column District
+		dataCategory: District
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 388fccdb-b938-40fa-b4da-9928c18849ce
+		sourceColumn: District
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy GeoRollup
+		lineageTag: 5f150257-024d-4cd1-9b39-1d20331c9606
+
+		level State
+			column: State
+			lineageTag: 71eb7a30-522c-4660-90e0-e5060ebe854f
+
+		level City
+			column: City
+			lineageTag: f19b1e94-a588-47ac-b7d5-6449de33e98d
+
+		level Zip
+			column: Zip
+			lineageTag: 8b4f3462-bd92-421e-a27e-00c27e5e7cd5
+

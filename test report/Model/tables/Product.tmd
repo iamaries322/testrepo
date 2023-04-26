@@ -1,0 +1,113 @@
+table Product
+	lineageTag: 9850c5f9-6af9-43ad-95a8-92b2aef35839
+	ordinal: 1
+
+	partition Product = M
+		mode: Import
+		expression:=
+			let
+			    Source = Sql.Database(".", "IP", [Query="SELECT #(lf) p.ProductID,#(lf) p.Product,#(lf) p.Category,#(lf) Segment,#(lf) m.[ManufacturerID],#(lf) IIF(p.Manufacturer='Maximus', 'VanArsdel', p.Manufacturer) Manufacturer, #(lf) p.IsCompete#(lf)FROM [SalesAndMarketing].[Product] p, #(lf) (#(lf)  select distinct [ManufacturerID], #(lf)Manufacturer#(lf)  from [IP].[SalesAndMarketing].[Sentiment]#(lf) ) m#(lf)where m.Manufacturer = p.Manufacturer"]),
+			    #"Renamed Columns" = Table.RenameColumns(Source, {{"Manufacturer", "Manufacturer"}, {"Category", "Category"}, {"Segment", "Segment"}, {"Product", "Product"}, {"ProductID", "ProductID"}, {"IsCompete", "IsCompeteHide"}, {"ManufacturerID", "ManufacturerID"}}),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Manufacturer", type text}, {"Category", type text}, {"Segment", type text}, {"Product", type text}, {"ProductID", Int64.Type}, {"IsCompeteHide", type text}, {"ManufacturerID", Int64.Type}})
+			in
+			    #"Changed Type"
+
+
+	measure 'Count of Product' = COUNTA('Product'[Product])
+		lineageTag: ddefa2e6-2083-486f-9c86-b4af8eb59e46
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Manufacturer
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 90e75066-74f4-42ae-982a-5a182583210e
+		sourceColumn: Manufacturer
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 11bf7525-53ab-405f-b051-edebeeb22062
+		sourceColumn: Category
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: f94d8f15-66a8-46d9-bbdc-dd966f942bf8
+		sourceColumn: Segment
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 4bdc392c-45ae-422e-847b-5dc5ff528514
+		sourceColumn: Product
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: Int64
+		isDataTypeInferred: false
+		isHidden
+		lineageTag: 4dc9152b-ba48-4585-b533-b060c462af57
+		sourceColumn: ProductID
+		summarizeBy: None
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column isVanArsdel = IF([Manufacturer]="VanArsdel", "Yes", "No")
+		dataType: String
+		lineageTag: 510d8f9e-cb49-4b25-8004-0eb1974bdcbe
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCompeteHide
+		dataType: String
+		isDataTypeInferred: false
+		isHidden
+		lineageTag: a3f04aa7-4896-4c6f-b139-14fb0666d67e
+		sourceColumn: IsCompeteHide
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column ManufacturerID
+		dataType: Int64
+		isDataTypeInferred: false
+		isHidden
+		lineageTag: 8249d572-37be-4648-9095-8ece850897ed
+		sourceColumn: ManufacturerID
+		summarizeBy: None
+
+	column IsCompete = IF([IsCompeteHide]="N", "No", "Yes")
+		dataType: String
+		lineageTag: a3012f61-6fed-4c4e-9444-14c75fdc6c9c
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy ProductRollup
+		lineageTag: a8541eae-3520-4a6d-a13a-d494b6d8958b
+
+		level Category
+			column: Category
+			lineageTag: f7559100-83ad-4fd2-b9b2-88ae052ca76d
+
+		level Segment
+			column: Segment
+			lineageTag: ee5ae701-405e-4058-93f1-0aafdee3393f
+
+		level Product
+			column: Product
+			lineageTag: f93e46f5-59c5-4f01-8490-e46fabad94a5
+

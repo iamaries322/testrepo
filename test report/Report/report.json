@@ -1,0 +1,26 @@
+{
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection1",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "power-bi-obvience-splash3701825477182865.png",
+            "path": "power-bi-obvience-splash3701825477182865.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ]
+}

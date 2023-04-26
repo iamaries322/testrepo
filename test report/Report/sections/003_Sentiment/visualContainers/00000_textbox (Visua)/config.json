@@ -1,0 +1,42 @@
+{
+  "name": "VisualContainer",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 25,
+        "y": 7,
+        "z": 0,
+        "width": 347,
+        "height": 69
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Sentiment Analysis",
+                    "textStyle": {
+                      "fontFamily": "Heading",
+                      "fontSize": "28pt",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

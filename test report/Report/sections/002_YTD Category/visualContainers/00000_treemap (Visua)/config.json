@@ -1,0 +1,156 @@
+{
+  "name": "VisualContainer2",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 24.870466321243523,
+        "y": 79.609756097560975,
+        "z": 2000,
+        "width": 472.53886010362692,
+        "height": 286.82926829268291
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "treemap",
+    "projections": {
+      "Group": [
+        {
+          "queryRef": "select",
+          "active": true
+        }
+      ],
+      "Details": [
+        {
+          "queryRef": "Geo.Region"
+        }
+      ],
+      "Values": [
+        {
+          "queryRef": "SalesFact.Total Units YTD"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "SalesFact",
+          "Type": 0
+        },
+        {
+          "Name": "p",
+          "Entity": "Product",
+          "Type": 0
+        },
+        {
+          "Name": "g",
+          "Entity": "Geo",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Manufacturer"
+          },
+          "Name": "select"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "g"
+              }
+            },
+            "Property": "Region"
+          },
+          "Name": "Geo.Region"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Total Units YTD"
+          },
+          "Name": "SalesFact.Total Units YTD"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "s"
+                }
+              },
+              "Property": "Total Units YTD"
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

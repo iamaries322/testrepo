@@ -1,0 +1,48 @@
+{
+  "name": "VisualContainer4",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 503.44186046511624,
+        "y": 10.271041369472183,
+        "z": 4000,
+        "width": 117.20930232558139,
+        "height": 71.897289586305277
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "multiRowCard",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "select"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "SalesFact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sentiment Gap"
+          },
+          "Name": "select"
+        }
+      ]
+    }
+  }
+}

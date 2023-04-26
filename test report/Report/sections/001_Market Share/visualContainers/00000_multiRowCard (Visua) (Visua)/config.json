@@ -1,0 +1,48 @@
+{
+  "name": "VisualContainer7",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 180,
+        "y": 66,
+        "z": 7000,
+        "width": 123,
+        "height": 75
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "multiRowCard",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "select"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "SalesFact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "% Units Market Share"
+          },
+          "Name": "select"
+        }
+      ]
+    }
+  }
+}

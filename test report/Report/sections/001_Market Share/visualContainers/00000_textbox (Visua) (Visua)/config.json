@@ -1,0 +1,39 @@
+{
+  "name": "VisualContainer9",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 552.12435233160625,
+        "y": 249.36585365853659,
+        "z": 9000,
+        "width": 358.1347150259067,
+        "height": 42.146341463414636
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Total Category Volume by Segment",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

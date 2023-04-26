@@ -1,0 +1,42 @@
+{
+  "name": "VisualContainer5",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 860.22471910112358,
+        "y": 679.94293865905854,
+        "z": 5000,
+        "width": 98.426966292134821,
+        "height": 40.057061340941516
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "obvience llc ©",
+                    "textStyle": {
+                      "fontFamily": "Heading",
+                      "fontSize": "9pt",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

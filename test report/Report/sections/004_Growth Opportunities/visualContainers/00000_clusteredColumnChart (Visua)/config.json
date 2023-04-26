@@ -1,0 +1,85 @@
+{
+  "name": "VisualContainer4",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 9.4382022471910112,
+        "y": 434.46504992867335,
+        "z": 4000,
+        "width": 453.03370786516854,
+        "height": 279.37232524964338
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "clusteredColumnChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Product.Segment",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "SalesFact.Total Units"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "p",
+          "Entity": "Product",
+          "Type": 0
+        },
+        {
+          "Name": "s",
+          "Entity": "SalesFact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Segment"
+          },
+          "Name": "Product.Segment"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Total Units"
+          },
+          "Name": "SalesFact.Total Units"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "s"
+                }
+              },
+              "Property": "Total Units"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

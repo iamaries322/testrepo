@@ -1,0 +1,48 @@
+{
+  "name": "VisualContainer2",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 26,
+        "y": 66,
+        "z": 2000,
+        "width": 125,
+        "height": 67
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "multiRowCard",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "select"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "SalesFact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Total Category Volume"
+          },
+          "Name": "select"
+        }
+      ]
+    }
+  }
+}

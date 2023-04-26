@@ -1,0 +1,122 @@
+[
+  {
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Product"
+          }
+        },
+        "Property": "Manufacturer"
+      }
+    },
+    "filter": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "p",
+          "Entity": "Product",
+          "Type": 0
+        }
+      ],
+      "Where": [
+        {
+          "Condition": {
+            "Or": {
+              "Left": {
+                "Or": {
+                  "Left": {
+                    "Or": {
+                      "Left": {
+                        "Comparison": {
+                          "ComparisonKind": 0,
+                          "Left": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "p"
+                                }
+                              },
+                              "Property": "Manufacturer"
+                            }
+                          },
+                          "Right": {
+                            "Literal": {
+                              "Value": "'VanArsdel'"
+                            }
+                          }
+                        }
+                      },
+                      "Right": {
+                        "Comparison": {
+                          "ComparisonKind": 0,
+                          "Left": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "p"
+                                }
+                              },
+                              "Property": "Manufacturer"
+                            }
+                          },
+                          "Right": {
+                            "Literal": {
+                              "Value": "'Natura'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Right": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "p"
+                            }
+                          },
+                          "Property": "Manufacturer"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'Aliqui'"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Right": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "p"
+                        }
+                      },
+                      "Property": "Manufacturer"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'Pirum'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "type": "Categorical",
+    "howCreated": 1
+  }
+]

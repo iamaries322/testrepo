@@ -1,0 +1,38 @@
+{
+  "name": "VisualContainer",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 24.641711229946523,
+        "y": 7.2103004291845494,
+        "z": 0,
+        "width": 436.36363636363637,
+        "height": 48.412017167381975
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "VanArsdel Ltd. - Market Share",
+                    "textStyle": {
+                      "fontSize": "21pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
