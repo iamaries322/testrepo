@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 190
+        "y": 75
       },
       "nodes": [
         {
@@ -18,7 +18,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 3
         },
         {
           "location": {
@@ -30,7 +30,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 5
         },
         {
           "location": {
@@ -54,7 +54,7 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 4
         },
         {
           "location": {
@@ -78,7 +78,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 6
         }
       ],
       "name": "All tables",
