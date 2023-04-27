@@ -1,4 +1,5 @@
 table Geo
+	isHidden
 	lineageTag: 5c925919-8b4a-4282-bd45-e8984ade9656
 	ordinal: 4
 
@@ -24,47 +25,62 @@ table Geo
 
 		annotation SummarizationSetBy = Automatic
 
+		changedProperty = IsHidden
+
 	column City
 		dataCategory: City
 		dataType: String
 		isDataTypeInferred: false
+		isHidden
 		lineageTag: fa622f9a-efb1-409a-ab30-b91d776f1f06
 		sourceColumn: City
 		summarizeBy: None
 
 		annotation SummarizationSetBy = Automatic
 
+		changedProperty = IsHidden
+
 	column State
 		dataCategory: StateOrProvince
 		dataType: String
 		isDataTypeInferred: false
+		isHidden
 		lineageTag: 9fcaec6b-9345-4e27-a13d-f21f72b9356d
 		sourceColumn: State
 		summarizeBy: None
 
 		annotation SummarizationSetBy = Automatic
 
+		changedProperty = IsHidden
+
 	column Region
 		dataCategory: Region
 		dataType: String
 		isDataTypeInferred: false
+		isHidden
 		lineageTag: a5e72325-16eb-4d71-a882-d70076f5d5a4
 		sourceColumn: Region
 		summarizeBy: None
 
 		annotation SummarizationSetBy = Automatic
 
+		changedProperty = IsHidden
+
 	column District
 		dataCategory: District
 		dataType: String
 		isDataTypeInferred: false
+		isHidden
 		lineageTag: 388fccdb-b938-40fa-b4da-9928c18849ce
 		sourceColumn: District
 		summarizeBy: None
 
 		annotation SummarizationSetBy = Automatic
 
+		changedProperty = IsHidden
+
 	hierarchy GeoRollup
+		isHidden
 		lineageTag: 5f150257-024d-4cd1-9b39-1d20331c9606
 
 		level State
@@ -78,4 +94,8 @@ table Geo
 		level Zip
 			column: Zip
 			lineageTag: 8b4f3462-bd92-421e-a27e-00c27e5e7cd5
+
+		changedProperty = IsHidden
+
+	changedProperty = IsHidden
 
