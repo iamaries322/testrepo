@@ -29,7 +29,7 @@ this is would help you link your currently open dashboard to pbi-tools
 
 now put the command:
 "pbi-tools extract -pid "processID" -watch"
-here copy the process id you got from the pbi-tools info
+here copy the process id you got from the pbi-tools info1
 
 now any changes made to pbix file will be reflected in the "config.json" file in source control section of vscode
 
