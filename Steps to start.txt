@@ -1,6 +1,7 @@
 
 download pbi-tools zip folder
 move to C:/tool/pbi-tools (for easier path)
+start menu - env - edit 
 
 create folder on desktop(report) 
 open in vscode and put the following commands in the terminal:
@@ -31,6 +32,9 @@ now put the command:
 here copy the process id you got from the pbi-tools info
 
 now any changes made to pbix file will be reflected in the "config.json" file in source control section of vscode
+
+
+go to your pbi dash and save it then commit from to github
 
 Before commiting, set global username & email
 git config --global user.name "your name" 
