@@ -49,19 +49,27 @@
   },
   "projectionOrdering": {
     "Category": [
-      0
+      0,
+      4
     ],
     "Series": [
       1
     ],
     "Y": [
       2
+    ],
+    "Rows": [
+      3
     ]
   },
   "projectionActiveItems": {
     "Category": [
       {
         "queryRef": "select",
+        "suppressConcat": false
+      },
+      {
+        "queryRef": "Product.isVanArsdel",
         "suppressConcat": false
       }
     ]
@@ -83,6 +91,16 @@
         "Name": "select2",
         "Type": 1,
         "Format": "0.00%;-0.00%;0.00%"
+      },
+      {
+        "Restatement": "IsCompete",
+        "Name": "Product.IsCompete",
+        "Type": 2048
+      },
+      {
+        "Restatement": "isVanArsdel",
+        "Name": "Product.isVanArsdel",
+        "Type": 2048
       }
     ],
     "Filters": [
@@ -137,6 +155,32 @@
             "Property": "% Unit Market Share YOY Change"
           }
         }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Product"
+              }
+            },
+            "Property": "IsCompete"
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Product"
+              }
+            },
+            "Property": "isVanArsdel"
+          }
+        }
       }
     ]
   },
@@ -149,6 +193,11 @@
           "isActive": true
         },
         {
+          "Name": "Category",
+          "Projection": 4,
+          "isActive": true
+        },
+        {
           "Name": "Series",
           "Projection": 1,
           "isActive": false
@@ -156,6 +205,11 @@
         {
           "Name": "Y",
           "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Rows",
+          "Projection": 3,
           "isActive": false
         }
       ]
@@ -168,8 +222,6 @@
       "roles": {
         "Category": true
       },
-      "sort": 1,
-      "sortOrder": 0,
       "type": {
         "category": null,
         "underlyingType": 1
@@ -225,6 +277,48 @@
             }
           },
           "Property": "% Unit Market Share YOY Change"
+        }
+      }
+    },
+    {
+      "displayName": "IsCompete",
+      "queryName": "Product.IsCompete",
+      "roles": {
+        "Rows": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Product"
+            }
+          },
+          "Property": "IsCompete"
+        }
+      }
+    },
+    {
+      "displayName": "isVanArsdel",
+      "queryName": "Product.isVanArsdel",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Product"
+            }
+          },
+          "Property": "isVanArsdel"
         }
       }
     }

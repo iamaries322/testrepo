@@ -19,6 +19,10 @@
         {
           "queryRef": "select",
           "active": true
+        },
+        {
+          "queryRef": "Product.isVanArsdel",
+          "active": true
         }
       ],
       "Series": [
@@ -29,6 +33,11 @@
       "Y": [
         {
           "queryRef": "select2"
+        }
+      ],
+      "Rows": [
+        {
+          "queryRef": "Product.IsCompete"
         }
       ]
     },
@@ -48,6 +57,11 @@
         {
           "Name": "s",
           "Entity": "SalesFact",
+          "Type": 0
+        },
+        {
+          "Name": "p",
+          "Entity": "Product",
           "Type": 0
         }
       ],
@@ -84,6 +98,30 @@
             "Property": "% Unit Market Share YOY Change"
           },
           "Name": "select2"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "IsCompete"
+          },
+          "Name": "Product.IsCompete",
+          "NativeReferenceName": "IsCompete"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "isVanArsdel"
+          },
+          "Name": "Product.isVanArsdel",
+          "NativeReferenceName": "isVanArsdel"
         }
       ]
     },

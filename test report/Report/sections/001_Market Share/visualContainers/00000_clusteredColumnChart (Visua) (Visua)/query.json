@@ -59,6 +59,30 @@
                 "Property": "% Unit Market Share YOY Change"
               },
               "Name": "select2"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "p"
+                  }
+                },
+                "Property": "IsCompete"
+              },
+              "Name": "Product.IsCompete",
+              "NativeReferenceName": "IsCompete"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "p"
+                  }
+                },
+                "Property": "isVanArsdel"
+              },
+              "Name": "Product.isVanArsdel",
+              "NativeReferenceName": "isVanArsdel"
             }
           ],
           "Where": [
@@ -207,21 +231,6 @@
                 }
               }
             }
-          ],
-          "OrderBy": [
-            {
-              "Direction": 1,
-              "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "d"
-                    }
-                  },
-                  "Property": "Rolling Period"
-                }
-              }
-            }
           ]
         },
         "Binding": {
@@ -229,8 +238,20 @@
             "Groupings": [
               {
                 "Projections": [
+                  3
+                ]
+              },
+              {
+                "Projections": [
                   0,
-                  2
+                  4
+                ]
+              }
+            ],
+            "Synchronization": [
+              {
+                "Groupings": [
+                  1
                 ]
               }
             ]
@@ -239,24 +260,62 @@
             "Groupings": [
               {
                 "Projections": [
-                  1
+                  1,
+                  2
                 ]
               }
             ]
           },
           "DataReduction": {
-            "DataVolume": 4,
-            "Primary": {
-              "Window": {
-                "Count": 200
+            "DataVolume": 6,
+            "Scoped": [
+              {
+                "Scope": {
+                  "Primary": [
+                    0
+                  ]
+                },
+                "Algorithm": {
+                  "Window": {
+                    "Count": 6
+                  }
+                }
+              },
+              {
+                "Scope": {
+                  "Primary": [
+                    1
+                  ]
+                },
+                "Algorithm": {
+                  "Top": {}
+                }
+              },
+              {
+                "Scope": {
+                  "Secondary": [
+                    0
+                  ]
+                },
+                "Algorithm": {
+                  "Top": {}
+                }
               }
-            },
-            "Secondary": {
-              "Top": {
-                "Count": 60
-              }
-            }
+            ]
           },
+          "Aggregates": [
+            {
+              "Select": 2,
+              "Aggregations": [
+                {
+                  "Min": {}
+                },
+                {
+                  "Max": {}
+                }
+              ]
+            }
+          ],
           "Version": 1
         },
         "ExecutionMetricsKind": 1
