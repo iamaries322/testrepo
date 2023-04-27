@@ -34,7 +34,7 @@ here copy the process id you got from the pbi-tools info
 now any changes made to pbix file will be reflected in the "config.json" file in source control section of vscode
 
 
-go to your pbi dash and save it then commit from to github
+go to your pbi dash and save it then commit from to github.
 
 Before commiting, set global username & email
 git config --global user.name "your name" 
