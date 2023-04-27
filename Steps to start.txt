@@ -31,3 +31,7 @@ now put the command:
 here copy the process id you got from the pbi-tools info
 
 now any changes made to pbix file will be reflected in the "config.json" file in source control section of vscode
+
+Before commiting, set global username & email
+git config --global user.name "your name" 
+git config --global user.email "your email" 
