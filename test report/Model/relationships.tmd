@@ -19,10 +19,6 @@ relationship '310a8827-9edf-45a6-8479-1a38cd44dea3'
 	fromColumn: Sentiment.zip
 	toColumn: Geo.Zip
 
-relationship '1265aba0-7aae-4aed-9ffc-ce447b5fc90e'
-	fromColumn: Sentiment.Date
-	toColumn: Date.Date
-
 relationship '8bf7aa3b-5884-4b49-8507-457027fb349a'
 	fromColumn: Sentiment.ManufacturerID
 	toColumn: Manufacturer.ManufacturerID
