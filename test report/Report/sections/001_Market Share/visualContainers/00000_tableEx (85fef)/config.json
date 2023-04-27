@@ -1,0 +1,84 @@
+{
+  "name": "85fef1d6e71e41d22023",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 180,
+        "y": 264,
+        "width": 150,
+        "height": 176,
+        "z": 9001
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "tableEx",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Date.Month"
+        },
+        {
+          "queryRef": "Date.Quarter"
+        },
+        {
+          "queryRef": "Sum(Date.Rolling Period Sort)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "Date",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Month"
+          },
+          "Name": "Date.Month",
+          "NativeReferenceName": "Month"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Quarter"
+          },
+          "Name": "Date.Quarter",
+          "NativeReferenceName": "Quarter"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Rolling Period Sort"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Date.Rolling Period Sort)",
+          "NativeReferenceName": "Rolling Period Sort"
+        }
+      ]
+    }
+  }
+}

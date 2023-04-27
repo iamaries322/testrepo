@@ -1,5 +1,4 @@
 table Sentiment
-	isHidden
 	lineageTag: f2b8d7ec-1dc1-49a2-800b-7404df10f575
 	ordinal: 5
 
@@ -19,15 +18,18 @@ table Sentiment
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+		changedProperty = IsHidden
+
 	measure 'Average of Score' = AVERAGE('Sentiment'[Score])
 		lineageTag: 3761e068-82da-47bb-91f7-152a6f0a2a2a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+		changedProperty = IsHidden
+
 	column DateID
 		dataType: Int64
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: 1bee4358-5917-4acb-8872-db8f54d793b0
 		sourceColumn: DateID
 		summarizeBy: Count
@@ -36,10 +38,11 @@ table Sentiment
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+		changedProperty = IsHidden
+
 	column StateID
 		dataType: Int64
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: 1414338f-dbd5-49c3-8029-ae3f6b5631bf
 		sourceColumn: StateID
 		summarizeBy: Count
@@ -48,10 +51,11 @@ table Sentiment
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+		changedProperty = IsHidden
+
 	column ManufacturerID
 		dataType: Int64
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: 1ab93f51-e64d-438d-95a8-608f725598ae
 		sourceColumn: ManufacturerID
 		summarizeBy: None
@@ -60,10 +64,11 @@ table Sentiment
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+		changedProperty = IsHidden
+
 	column Score
 		dataType: Double
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: 3e4a0027-bd29-4556-84e2-260d595e9b04
 		sourceColumn: Score
 		summarizeBy: Sum
@@ -72,21 +77,23 @@ table Sentiment
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+		changedProperty = IsHidden
+
 	column Manufacturer
 		dataType: String
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: 525a95d5-12a6-422e-8b1b-3be961462db8
 		sourceColumn: Manufacturer
 		summarizeBy: None
 
 		annotation SummarizationSetBy = Automatic
 
+		changedProperty = IsHidden
+
 	column Date
 		dataCategory: Date
 		dataType: DateTime
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: b2ea26bc-fcef-44ca-b59f-df951ab08cd5
 		sourceColumn: Date
 		summarizeBy: None
@@ -95,34 +102,41 @@ table Sentiment
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
+		changedProperty = IsHidden
+
 	column State
 		dataCategory: StateOrProvince
 		dataType: String
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: b49edfe2-397e-4189-a18c-72253326c946
 		sourceColumn: State
 		summarizeBy: None
 
 		annotation SummarizationSetBy = Automatic
 
+		changedProperty = IsHidden
+
 	column zip
 		dataType: String
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: 36264a4b-47cb-4f44-a5bc-3ab74707cb9e
 		sourceColumn: zip
 		summarizeBy: None
 
 		annotation SummarizationSetBy = Automatic
 
+		changedProperty = IsHidden
+
 	column ProductID
 		dataType: Int64
 		isDataTypeInferred: false
-		isHidden
 		lineageTag: 95105ff8-615a-4015-a9f8-35232a895e6d
 		sourceColumn: ProductID
 		summarizeBy: Count
 
 		annotation SummarizationSetBy = Automatic
+
+		changedProperty = IsHidden
+
+	changedProperty = IsHidden
 
