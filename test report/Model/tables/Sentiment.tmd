@@ -9,9 +9,10 @@ table Sentiment
 			    Source = Sql.Database(".", "IP", [Query="SELECT s.[DateID]+6 DateID ,s.[StateID], s.[ManufacturerID], s.[Score], s.[Manufacturer], dateadd(month, 6, s.[Date]) Date, s.[State],  g.zip, m.ProductID#(lf)FROM [SalesAndMarketing].[Sentiment] s#(lf),#(lf)(#(lf) select distinct state,#(lf) (select top 1 zip from  [SalesAndMarketing].[Geo] where g.state = state) zip#(lf)  from [SalesAndMarketing].[Geo] g#(lf)) g#(lf),#(lf)(#(lf) select distinct Manufacturer,#(lf) (select top 1 ProductID from  [SalesAndMarketing].Product where g.Manufacturer = Manufacturer) ProductID#(lf)  from [SalesAndMarketing].Product g#(lf)) m#(lf)where s.State = g.State and s.Manufacturer = m.Manufacturer"]),
 			    #"Renamed Columns" = Table.RenameColumns(Source, {{"DateID", "DateID"}, {"StateID", "StateID"}, {"ManufacturerID", "ManufacturerID"}, {"Score", "Score"}, {"Manufacturer", "Manufacturer"}, {"Date", "Date"}, {"State", "State"}, {"zip", "zip"}, {"ProductID", "ProductID"}}),
 			    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"DateID", Int64.Type}, {"StateID", Int64.Type}, {"ManufacturerID", Int64.Type}, {"Score", type number}, {"Manufacturer", type text}, {"Date", type datetime}, {"State", type text}, {"zip", type text}, {"ProductID", Int64.Type}}),
-			    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Date"})
+			    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Date"}),
+			    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns",{{"DateID", "DateIDDD"}})
 			in
-			    #"Removed Columns"
+			    #"Renamed Columns1"
 
 
 	measure 'Sum of Score' = SUM('Sentiment'[Score])
@@ -28,11 +29,11 @@ table Sentiment
 
 		changedProperty = IsHidden
 
-	column DateID
+	column DateIDDD
 		dataType: Int64
 		isDataTypeInferred: false
 		lineageTag: 1bee4358-5917-4acb-8872-db8f54d793b0
-		sourceColumn: DateID
+		sourceColumn: DateIDDD
 		summarizeBy: Count
 
 		annotation SummarizationSetBy = Automatic

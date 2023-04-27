@@ -18,6 +18,10 @@ table Product
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Measure = DISTINCTCOUNT('Date'[Month])
+		formatString:= 0
+		lineageTag: b114ddae-696b-4290-a0bf-9819822c94b2
+
 	column Manufacturer
 		dataType: String
 		isDataTypeInferred: false
