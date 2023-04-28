@@ -1,6 +1,8 @@
 Part 1 - https://www.youtube.com/watch?v=6zyvtxJSoyA
 
-Part 2- https://www.youtube.com/watch?v=z3feuRCmsMM
+Part 2(git)- https://www.youtube.com/watch?v=z3feuRCmsMM
+
+Part 2(Azure Depvops) - https://www.youtube.com/watch?v=KnRO_US4avc
 
 
 
