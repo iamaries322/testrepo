@@ -48,3 +48,6 @@ add a new pbi report
 run command 
 pbi-tools info (for processID)
 pbi-tools extract -pid "processID" -watch
+
+
+
