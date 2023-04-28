@@ -39,3 +39,10 @@ go to your pbi dash and save it then commit from to github.
 Before commiting, set global username & email
 git config --global user.name "your name" 
 git config --global user.email "your email" 
+
+
+
+add a new pbi report
+run command 
+pbi-tools info (for processID)
+pbi-tools extract -pid "processID" -watch
