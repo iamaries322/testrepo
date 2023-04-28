@@ -110,19 +110,6 @@
             "Property": "Segment"
           }
         }
-      },
-      {
-        "type": 2,
-        "expression": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "SalesFact"
-              }
-            },
-            "Property": "Total Category Volume"
-          }
-        }
       }
     ]
   },

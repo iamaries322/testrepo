@@ -23,52 +23,6 @@
         "Name": "Sum(Date.Rolling Period Sort)",
         "Type": 3
       }
-    ],
-    "Filters": [
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Date"
-              }
-            },
-            "Property": "Month"
-          }
-        }
-      },
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Date"
-              }
-            },
-            "Property": "Quarter"
-          }
-        }
-      },
-      {
-        "type": 2,
-        "expression": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Date"
-                  }
-                },
-                "Property": "Rolling Period Sort"
-              }
-            },
-            "Function": 0
-          }
-        }
-      }
     ]
   },
   "visualElements": [

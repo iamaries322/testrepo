@@ -98,45 +98,6 @@
             "Property": "Running Year"
           }
         }
-      },
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Date"
-              }
-            },
-            "Property": "Month"
-          }
-        }
-      },
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Product"
-              }
-            },
-            "Property": "isVanArsdel"
-          }
-        }
-      },
-      {
-        "type": 2,
-        "expression": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "SalesFact"
-              }
-            },
-            "Property": "Total Units"
-          }
-        }
       }
     ]
   },
