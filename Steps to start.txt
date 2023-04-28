@@ -1,3 +1,5 @@
+Quick setup guide on website :
+https://pbi.tools/tutorials/getting-started-cli.html
 
 download pbi-tools zip folder
 move to C:/tool/pbi-tools (for easier path)
